@@ -1,0 +1,25 @@
+html, body { margin: 0; height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif; }
+#map { position: absolute; inset: 0; }
+
+.panel {
+  position: absolute; top: 12px; right: 12px; z-index: 2; /* map buttons sit top-left */
+  width: min(380px, calc(100% - 80px));
+  display: grid; grid-template-columns: 1fr auto; gap: 8px;
+}
+.panel input {
+  padding: 12px 16px; border: 0; border-radius: 999px; font-size: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.panel button {
+  width: 44px; height: 44px; border: 0; border-radius: 50%; background: #fff; color: #0f766e;
+  font-weight: 700; cursor: pointer; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+#results, #here {
+  grid-column: 1 / -1; margin: 0; background: #fff; border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+#results { list-style: none; padding: 6px; max-height: 50vh; overflow: auto; }
+#results li { display: grid; padding: 8px 10px; border-radius: 10px; cursor: pointer; }
+#results li:hover { background: #f1f5f4; }
+#results span { font-size: 13px; color: #64748b; }
+#here { padding: 10px 14px; font-size: 13px; color: #334155; }
